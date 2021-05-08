@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "nombre": "hrv",
+    "marca": "nissan",
+    "precio": 1500
+  },
+
+  {
+    "id": 2,
+    "nombre": "sca",
+    "marca": "mercedes",
+    "precio": 2000
+  }
+]
