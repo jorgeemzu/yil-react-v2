@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,6 +7,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Lato", sans-serif;
+  color: var(--black);
+}
+
+:root {
+  --red: #db0500;
+  --black: #1f1f1f;
+  --overlay: rgba(23, 23, 23, 0.7);
+  --overlayHover: rgba(23, 23, 23, 0.9);
 }
 
 code {
@@ -33,16 +44,23 @@ ul {
 }
 
 strong {
-  color: red;
+  color: var(--red);
 }
 
 h1 {
+  font-family: "Bebas Neue";
+  letter-spacing: 3px;
   margin: 0;
   color: white;
+  font-size: clamp(1.5rem, 6vw, 3.5rem);
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 .black-bg {
-  background-color: black;
+  background-color: var(--black);
 }
 
 .container {
@@ -56,7 +74,7 @@ h1 {
 }
 
 .nav-toggle {
-  background-color: red;
+  background-color: var(--red);
   width: 20px;
   height: 2px;
   position: relative;
@@ -65,7 +83,7 @@ h1 {
 .nav-toggle::after,
 .nav-toggle::before {
   content: "";
-  background-color: red;
+  background-color: var(--red);
   width: 20px;
   height: 2px;
   position: absolute;
@@ -110,6 +128,11 @@ h1 {
 .nav-links a,
 .desktop-nav a {
   color: white;
+  transition: 0.5s all;
+}
+
+.desktop-link-item:hover {
+  transform: scale(1.1);
 }
 
 .nav-link-item + .nav-link-item {
@@ -143,6 +166,11 @@ h1 {
 
 .nav-social-item {
   width: 25px;
+  transition: 0.5s all;
+}
+
+.nav-social-item:hover {
+  transform: translateY(-5px);
 }
 
 .nav-social-mobile {
@@ -174,8 +202,8 @@ h1 {
 }
 
 .btn-red {
-  background-color: red;
-  border: solid 2px red;
+  background-color: var(--red);
+  border: solid 2px var(--red);
   color: white;
   padding: 0.5em 2em;
   margin-top: 2em;
@@ -186,7 +214,7 @@ h1 {
 }
 
 .btn-transparent {
-  border: solid 2px red;
+  border: solid 2px var(--red);
   background-color: transparent;
   padding: 0.5em 2em;
   transition: 0.5s all;
@@ -199,12 +227,65 @@ h1 {
 }
 
 .btn-transparent:hover {
-  background-color: red;
+  background-color: var(--red);
+}
+
+.categorias {
+  margin: 6em 0;
+}
+
+.cat-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4em;
+}
+
+.cat-card {
+  width: 24.7vw;
+  overflow: hidden;
+  min-width: 271px;
+  height: 16vw;
+  min-height: 181px;
+  position: relative;
+}
+
+.cat-card img {
+  object-fit: cover;
+}
+
+.cat-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cat-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+}
+
+.cat-overlay:hover {
+  background-color: var(--overlayHover);
+}
+
+.cat-titulo {
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 565px) {
   .btn-transparent {
     margin-top: 1.5em;
+  }
+
+  .hero__bg {
+    background-image: url("./imgs/bg\ movil.png");
   }
 }
 
@@ -232,6 +313,6 @@ h1 {
 
   .hero-text {
     width: clamp(300px, 50vw, 600px);
-    font-size: clamp(2rem, 3vw, 5rem);
+    /* font-size: clamp(2rem, 3vw, 5rem); */
   }
 }

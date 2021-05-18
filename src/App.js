@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import NavBar from "./components/NavBar";
 import Autos from "./components/Autos";
 import Contacto from "./components/Contacto";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <Hero />
+            <Home />
           </Route>
 
           {/* <Route path="/auto/:carId">
