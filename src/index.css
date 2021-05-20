@@ -251,8 +251,9 @@ h2 {
   position: relative;
 }
 
-.cat-card img {
+.cat-card-img {
   object-fit: cover;
+  transition: 0.5s all;
 }
 
 .cat-overlay {
@@ -277,6 +278,77 @@ h2 {
 
 .cat-titulo {
   font-size: 1.5rem;
+}
+
+.cat-card:hover .cat-card-img {
+  transform: scale(1.1);
+}
+
+.destacados {
+  margin: 10em 0;
+}
+
+.destacadosGrid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+  gap: 3em;
+  margin: 6em 0;
+}
+
+/* .car-card {
+  padding-bottom: 2em;
+  transition: 1s all;
+} */
+
+.car-card-img {
+  position: relative;
+  overflow: hidden;
+  transition: 1s all;
+  box-shadow: 8px 5px 32px -2px rgba(0, 0, 0, 0.35);
+}
+
+.car-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+.card-overlay-text {
+  color: white;
+  font-weight: 700;
+  transition: 0.5s all;
+}
+
+.card-text h2 {
+  color: var(--black);
+  font-size: 1.5rem;
+}
+
+.car-card:hover .car-overlay {
+  opacity: 1;
+}
+
+.card-img {
+  transition: 0.5s all;
+  transform: scale(1.1);
+}
+
+.car-card:hover .card-img {
+  transform: scale(1.3);
+}
+
+.card-text strong {
+  font-size: 1.7rem;
 }
 
 @media screen and (max-width: 565px) {

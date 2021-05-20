@@ -19,7 +19,7 @@ function App() {
             <Home />
           </Route>
 
-          {/* <Route path="/auto/:carId">
+          {/* <Route path="/auto/detalles/:carId">
             <AutoDetails />
           </Route> */}
 
