@@ -1,6 +1,7 @@
 import AutoGrid from "./autoGrid";
 import Categorias from "./Categorias";
 import Hero from "./Hero";
+import Location from "./Location";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Categorias />
       <AutoGrid />
+      <Location />
     </>
   );
 }

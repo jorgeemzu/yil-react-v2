@@ -59,6 +59,10 @@ h2 {
   font-size: 2rem;
 }
 
+p {
+  font-size: 1.6rem;
+}
+
 .black-bg {
   background-color: var(--black);
 }
@@ -230,6 +234,10 @@ h2 {
   background-color: var(--red);
 }
 
+.texto-negro:hover {
+  color: var(--black);
+}
+
 .categorias {
   margin: 6em 0;
 }
@@ -349,6 +357,26 @@ h2 {
 
 .card-text strong {
   font-size: 1.7rem;
+}
+
+.leaflet-container {
+  width: 40vw;
+  height: 40vh;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+.location-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+  margin-top: 7em;
+}
+
+.address-container img {
+  width: clamp(50px, 10vw, 70px);
 }
 
 @media screen and (max-width: 565px) {

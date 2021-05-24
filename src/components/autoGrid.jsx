@@ -44,6 +44,10 @@ export default function AutoGrid() {
           );
         })}
       </div>
+
+      <Link className="btn-red texto-negro" to="/autos">
+        Ver mas Autos
+      </Link>
     </section>
   );
 }
