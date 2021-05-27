@@ -6,8 +6,7 @@ import { useState } from "react";
 
 export default function NavBar({ clase } = "") {
   const [isOpen, setOpen] = useState(false);
-  const navFondo = clase;
-  console.log(navFondo);
+
   const toggleNav = () => {
     setOpen(!isOpen);
   };

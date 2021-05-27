@@ -379,6 +379,58 @@ p {
   width: clamp(50px, 10vw, 70px);
 }
 
+.contact-section {
+  background-image: url("./imgs/contact-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--overlay);
+  padding: 2em 0;
+}
+
+.contact-section {
+  margin-top: 7em;
+}
+
+.contact-section h2,
+.contact-section label {
+  color: white;
+  margin-bottom: 2em;
+}
+
+input,
+textarea {
+  width: 20vw;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  background-color: transparent;
+  border: solid 2px var(--red);
+  color: white;
+  padding: 0.6em 1em;
+  outline: none;
+  transition: 0.5s all;
+}
+
+input:focus,
+textarea:focus {
+  border-color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 565px) {
   .btn-transparent {
     margin-top: 1.5em;
