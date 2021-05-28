@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Autos from "./components/Autos";
 import Contacto from "./components/Contacto";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Contacto />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

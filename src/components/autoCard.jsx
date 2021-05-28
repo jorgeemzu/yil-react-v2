@@ -15,7 +15,7 @@ export default function AutoCard(props) {
 
         <div className="card-text">
           <h2>{titulo}</h2>
-          <strong>{precio}</strong>
+          <strong>${precio}</strong>
         </div>
       </Link>
     </div>

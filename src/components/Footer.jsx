@@ -1,7 +1,7 @@
 import logo from "../imgs/logo.png";
 import location from "../imgs/marker.svg";
 import instagram from "../imgs/instagram.png";
-import sobre from "../imgs/sobre.png";
+import sobre from "../imgs/envelope.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="info-container">
-          <img src={logo} alt="Yil Martins Logo" />
+          <img className="footer-logo" src={logo} alt="Yil Martins Logo" />
           <div className="info">
             <a
               className="info-item info-location"
@@ -44,23 +44,31 @@ export default function Footer() {
         </div>
 
         <div className="footer-menu">
-          <Link className="nav-link-item" to="/">
+          <Link className="footer-nav-item" to="/">
             Inicio
           </Link>
-          <Link className="nav-link-item" to="/autos">
+          <Link className="footer-nav-item" to="/autos">
             Autos
           </Link>
-          <Link className="nav-link-item" to="/contacto">
+          <Link className="footer-nav-item" to="/contacto">
             Contacto
           </Link>
         </div>
 
-        <div className="footer-cat">
+        <div className="footer-cat-container">
           <h3>Categorias</h3>
-          <Link to="/categorias/pickup">Pickup</Link>
-          <Link to="/categorias/sedan">Sedan</Link>
-          <Link to="/categorias/suv">SUV</Link>
-          <Link to="/categorias/HatchBack">HatchBack</Link>
+          <Link className="footer-cat" to="/categorias/pickup">
+            Pickup
+          </Link>
+          <Link className="footer-cat" to="/categorias/sedan">
+            Sedan
+          </Link>
+          <Link className="footer-cat" to="/categorias/suv">
+            SUV
+          </Link>
+          <Link className="footer-cat" to="/categorias/HatchBack">
+            HatchBack
+          </Link>
         </div>
       </div>
     </footer>

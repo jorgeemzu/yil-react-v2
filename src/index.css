@@ -60,7 +60,7 @@ h2 {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .black-bg {
@@ -431,6 +431,72 @@ button {
   cursor: pointer;
 }
 
+footer {
+  background-color: var(--black);
+  padding: 3em 0;
+}
+
+footer a {
+  color: white;
+  font-size: 1.3rem;
+}
+
+footer p {
+  font-size: 1rem;
+  width: 50%;
+}
+
+.footer-logo {
+  width: clamp(100px, 50vw, 120px);
+  margin-bottom: 2em;
+}
+
+.info {
+  margin: 2em 0;
+}
+
+.info-item img {
+  width: 10vw;
+  max-width: 30px;
+  margin-right: 1em;
+}
+
+.info-item {
+  display: flex;
+
+  align-items: center;
+}
+
+.info-item + .info-item {
+  margin-top: 2em;
+}
+
+.footer-cat-container h3 {
+  color: var(--red);
+  margin-bottom: 3em;
+  margin-top: 0;
+}
+
+.footer-cat + .footer-cat {
+  margin-top: 2em;
+}
+
+.footer-menu {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 80px));
+  gap: 2em;
+  align-items: center;
+}
+
+footer .container {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 357px));
+}
+
 @media screen and (max-width: 565px) {
   .btn-transparent {
     margin-top: 1.5em;
@@ -445,6 +511,10 @@ button {
   .desktop-nav,
   .nav-social.social-dektop {
     display: none;
+  }
+
+  .info-item {
+    justify-content: center;
   }
 }
 
@@ -466,5 +536,9 @@ button {
   .hero-text {
     width: clamp(300px, 50vw, 600px);
     /* font-size: clamp(2rem, 3vw, 5rem); */
+  }
+
+  .info-container {
+    text-align: left;
   }
 }
