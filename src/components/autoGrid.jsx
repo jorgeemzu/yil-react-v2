@@ -1,17 +1,17 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import AutoCard from "./autoCard";
 
 import info from "./util/AutoData";
-console.log(info);
+
 export default function AutoGrid() {
-  console.log("hola2");
+  const [autos, setAutos] = useState(info);
+  console.log(autos);
   return (
     <section className="destacados">
       <h2>Autos Destacados</h2>
       <div className="destacadosGrid">
-        {info.map(auto => {
-          console.log(auto);
-          console.log("hola3");
+        {autos.map(auto => {
           return (
             <AutoCard
               titulo={auto.nombre}

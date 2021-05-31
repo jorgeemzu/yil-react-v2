@@ -2,7 +2,7 @@ import "./App.css";
 
 // import AutoGrid from "./components/autoGrid";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import AutoDetails from "./components/AutoDetails";
+import AutoDetails from "./components/AutoDetails";
 // import NavBar from "./components/NavBar";
 import Autos from "./components/Autos";
 import Contacto from "./components/Contacto";
@@ -20,9 +20,9 @@ function App() {
             <Home />
           </Route>
 
-          {/* <Route path="/auto/detalles/:carId">
+          <Route path="/auto/detalles/:carId">
             <AutoDetails />
-          </Route> */}
+          </Route>
 
           <Route path="/autos">
             <Autos />

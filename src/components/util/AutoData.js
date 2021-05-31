@@ -1,14 +1,14 @@
 import client from "../util/Contentful";
 
-const autoInfo = [];
+let autoInfo = [];
 
 client.getEntries({}).then(response => {
   const autos = response.items;
   const autoData = formatData(autos);
+  
   autoData.map(auto => autoInfo.push(auto));
   //   console.log(autoInfo);
 });
-
 function formatData(items) {
   let tempItems = items.map(item => {
     let id = item.sys.id;

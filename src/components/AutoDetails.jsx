@@ -1,17 +1,35 @@
 import { useState } from "react";
 import { useParams } from "react-router";
-import autos from "./util/autos.json";
+import NavBar from "./NavBar";
+import PageHeader from "./PageHeader";
+import Location from "./Location";
+// import autos from "./util/autos.json";
+import info from "./util/AutoData";
+import DetailsInfo from "./DetailsInfo";
 
 export default function AutoDetails() {
   const { carId } = useParams();
-  const found = autos.find(carro => carro.id == carId);
+  const found = info.find(carro => carro.id == carId);
 
-  console.log(found);
+  const { nombre, precio } = found;
+  const portada = found.portada.fields.file.url;
+  const colorAuto = found.color.content[0].content[0].value;
+  const trans = found.transmision.content[0].content[0].value;
+  const motorAuto = found.motor.content[0].content[0].value;
+
   return (
     <div>
-      <h1>Details {carId} </h1>
-      <h2>Marca {found.marca}</h2>
-      <h2>precio {found.precio}</h2>
+      <NavBar clase="black-bg" />
+      <PageHeader titulo="Detalles del Auto" />
+      <DetailsInfo
+        nombre={nombre}
+        precio={precio}
+        images={portada}
+        color={colorAuto}
+        motor={motorAuto}
+        transmision={trans}
+      />
+      <Location />
     </div>
   );
 }
