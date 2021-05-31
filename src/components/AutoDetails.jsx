@@ -6,12 +6,13 @@ import Location from "./Location";
 // import autos from "./util/autos.json";
 import info from "./util/AutoData";
 import DetailsInfo from "./DetailsInfo";
+import DescripcionTabs from "./DescripcionTabs";
 
 export default function AutoDetails() {
   const { carId } = useParams();
   const found = info.find(carro => carro.id == carId);
 
-  const { nombre, precio } = found;
+  const { nombre, precio, descripcion, interior, exterior } = found;
   const portada = found.portada.fields.file.url;
   const colorAuto = found.color.content[0].content[0].value;
   const trans = found.transmision.content[0].content[0].value;
@@ -29,6 +30,7 @@ export default function AutoDetails() {
         motor={motorAuto}
         transmision={trans}
       />
+      <DescripcionTabs descripcion={[descripcion, interior, exterior]} />
       <Location />
     </div>
   );

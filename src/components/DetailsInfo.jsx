@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 
 export default function DetailsInfo(props) {
-  const { nombre, precio, color, motor, transmision, images } = props;
+  const { nombre, precio, color, motor, transmision, images, descripcion } =
+    props;
+
+  console.log(descripcion);
 
   return (
     <section className="container">
@@ -29,7 +32,7 @@ export default function DetailsInfo(props) {
             {transmision}
           </p>
 
-          <Link className="btn-red texto-negro">
+          <Link to="/contacto" className="btn-red texto-negro">
             ¿Necesitas más informacion?
           </Link>
         </div>

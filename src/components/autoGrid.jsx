@@ -6,7 +6,7 @@ import info from "./util/AutoData";
 
 export default function AutoGrid() {
   const [autos, setAutos] = useState(info);
-  console.log(autos);
+
   return (
     <section className="destacados">
       <h2>Autos Destacados</h2>
