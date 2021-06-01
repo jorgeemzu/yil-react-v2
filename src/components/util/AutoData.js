@@ -5,7 +5,7 @@ let autoInfo = [];
 client.getEntries({}).then(response => {
   const autos = response.items;
   const autoData = formatData(autos);
-  
+
   autoData.map(auto => autoInfo.push(auto));
   //   console.log(autoInfo);
 });
