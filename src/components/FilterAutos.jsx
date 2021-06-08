@@ -12,7 +12,7 @@ export default function FilterAutos({ catAutos }) {
   //   });
   // }, []);
 
-  useEffect(() => setAutos(catAutos));
+  useEffect(() => setAutos(catAutos), []);
 
   console.log(autoInfo);
 
