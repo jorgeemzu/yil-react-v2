@@ -8,6 +8,8 @@ import Autos from "./components/Autos";
 import Contacto from "./components/Contacto";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import AutosPage from "./components/AutosPage";
+import CategoriasPage from "./components/CategoriasPage";
 
 function App() {
   return (
@@ -25,7 +27,11 @@ function App() {
           </Route>
 
           <Route path="/autos">
-            <Autos />
+            <AutosPage />
+          </Route>
+
+          <Route path="/categorias/:autoCat">
+            <CategoriasPage />
           </Route>
 
           <Route exact path="/contacto">

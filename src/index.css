@@ -594,6 +594,14 @@ footer .container {
   margin: 0 auto;
 }
 
+.search-bar {
+  color: var(--black);
+}
+
+.search-bar:focus {
+  border-color: red;
+}
+
 @media screen and (max-width: 565px) {
   .btn-transparent {
     margin-top: 1.5em;
