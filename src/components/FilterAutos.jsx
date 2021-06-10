@@ -1,4 +1,3 @@
-import client from "../components/util/Contentful";
 import { useEffect, useState } from "react";
 import AutoCard from "./autoCard";
 
@@ -6,15 +5,7 @@ export default function FilterAutos({ catAutos }) {
   const [autoInfo, setAutos] = useState([]);
   const [searchAuto, setSearch] = useState("");
 
-  // useEffect(() => {
-  //   client.getEntries({}).then(response => {
-  //     setAutos(response.items);
-  //   });
-  // }, []);
-
-  useEffect(() => setAutos(catAutos), []);
-
-  console.log(autoInfo);
+  useEffect(() => setAutos(catAutos), [catAutos]);
 
   return (
     <section className="destacados">

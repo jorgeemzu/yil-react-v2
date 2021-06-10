@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function DetailsInfo(props) {
-  const { nombre, precio, color, motor, transmision, images, descripcion } =
-    props;
-
-  console.log(descripcion);
+  const { nombre, precio, color, motor, transmision, images } = props;
 
   return (
     <section className="container">

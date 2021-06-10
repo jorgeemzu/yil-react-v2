@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AutoCard from "./autoCard";
-import client from "../components/util/Contentful";
-
-//import info from "./util/AutoData";
+import AutoData from "./util/AutoData";
 
 export default function AutoGrid() {
   const [autoInfo, setAutos] = useState();
 
   useEffect(() => {
-    client.getEntries({}).then(response => {
-      setAutos(response.items);
-    });
-  }, []);
+    AutoData().then(autos => setAutos(autos));
+  }, [autoInfo]);
 
   if (autoInfo === undefined) {
     return <h1>error</h1>;

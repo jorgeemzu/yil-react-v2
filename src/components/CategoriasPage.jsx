@@ -1,12 +1,11 @@
 import NavBar from "./NavBar";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import client from "../components/util/Contentful";
-import AutoCard from "./autoCard";
 import PageHeader from "./PageHeader";
 import Categorias from "./Categorias";
 import Location from "./Location";
 import FilterAutos from "./FilterAutos";
+import AutoData from "./util/AutoData";
 
 export default function CategoriasPage() {
   const { autoCat } = useParams();
@@ -14,10 +13,8 @@ export default function CategoriasPage() {
   const catFiltro = [];
 
   useEffect(() => {
-    client.getEntries({}).then(response => {
-      setCategoria(response.items);
-    });
-  }, []);
+    AutoData().then(autos => setCategoria(autos));
+  }, [categoria]);
 
   return (
     <>
