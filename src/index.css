@@ -602,6 +602,19 @@ footer .container {
   border-color: red;
 }
 
+.left-arrow,
+.right-arrow {
+  color: var(--red);
+  cursor: pointer;
+  user-select: none;
+  font-size: 2rem;
+  margin-top: 0.5em;
+}
+
+.slider {
+  position: relative;
+}
+
 @media screen and (max-width: 565px) {
   .btn-transparent {
     margin-top: 1.5em;

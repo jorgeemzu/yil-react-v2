@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AutoCard from "./autoCard";
 import AutoData from "./util/AutoData";
+import Spinner from "./Spinner";
 
 export default function AutoGrid() {
   const [autoInfo, setAutos] = useState();
@@ -11,7 +12,7 @@ export default function AutoGrid() {
   }, [autoInfo]);
 
   if (autoInfo === undefined) {
-    return <h1>error</h1>;
+    return <Spinner />;
   } else {
     return (
       <section className="destacados">
